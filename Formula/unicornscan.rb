@@ -15,8 +15,8 @@
 class Unicornscan < Formula
   desc "Asynchronous stateless TCP/UDP network scanner with web UI"
   homepage "https://github.com/robertelee78/unicornscan"
-  url "https://github.com/robertelee78/unicornscan/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "aae61000c0cad1af0f1d66ac028c38887af3acf7cc607517c302ae24da1438af"
+  url "https://github.com/robertelee78/unicornscan/archive/refs/tags/v0.4.52.tar.gz"
+  sha256 "20ddefc6f12e316101236007375a88d5e5a369627cc1f1e51b1d32e51e66873a"
   license "GPL-2.0-or-later"
   head "https://github.com/robertelee78/unicornscan.git", branch: "main"
 
@@ -136,6 +136,7 @@ class Unicornscan < Formula
     # Sandbox profile for the listener process.  The configure.ac
     # SANDBOX_PROFILE macro points to datadir/unicornscan/ at runtime.
     (share/"unicornscan").install "macos/unicornscan-listener.sb"
+    (share/"unicornscan").install "macos/unicornscan-sender.sb"
 
     # ChmodBPF LaunchDaemon files -- users run install-chmodbpf.sh
     # manually after brew install (requires sudo).
